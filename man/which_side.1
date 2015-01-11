@@ -1,0 +1,31 @@
+.\ man page for which_side
+.TH WHICH_SIDE 1
+.SH NAME
+which_side \- find out which side of the street the car should be parked on
+.SH SYNOPSIS
+.B which_side
+[OPTIONS]
+.SH DESCRIPTION
+Find out which side of the street the car should be parked on during winter month alternate side parking restrictions. On odd days, the car should be parked on the side of the street with odd house numbers. After noon, the program will determine the side of the street the car will need to be parked on for the next day.
+.SH OPTIONS
+.TP
+.B \-i
+send stdio to stdout before the rest of the output 
+.TP
+.B \-e
+indicates that house is on even side of street
+.TP
+.B \-v
+turns on verbose output
+.TP
+.B \-h
+displays help information
+.SH RETURN CODES
+.TP
+.B 0
+car should be parked in front of house
+.TP
+.B 1
+car should be parked across the street from house
+.SH AUTHOR
+Erik Ripley <erikripley@gmail.com>
