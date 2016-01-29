@@ -10,12 +10,8 @@
  */
  
 bool is_even(int num) {
-   /* return 0 for true, 1 for false */
-   if (num % 2 == 0) {
-      return true;   
-   } else {
-     return false;
-   } 
+   /* Check if the number has a remainder when divided by 2. If not, then it is even. */
+   return (num % 2 == 0);
 }
 
 
