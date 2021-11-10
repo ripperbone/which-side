@@ -8,16 +8,29 @@ namespace WhichSide
 {
     class Program
     {
-
-
-
-
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            StreetSideDeterminer whichSide = new StreetSideDeterminer();
-            Console.WriteLine(whichSide.DetermineWhichSide());
+            bool verbose = false;
+            bool houseEven = false;
+            foreach (string opt in args)
+            {
+                switch (opt)
+                {
+                    case "-v":
+                        verbose = true;
+                        break;
+                    case "-e":
+                        houseEven = true;
+                        break;
+                    case "-h":
+                        Console.WriteLine($"Usage: {System.AppDomain.CurrentDomain.FriendlyName} [-e] [-h] [-v]");
+                        return 1;
+                }
+            }
 
-            
+
+            Console.WriteLine(WhichSide.CheckWhichSide(DateTime.Now, houseEven: houseEven, verbose: verbose));
+            return 0;
         }
     }
 }

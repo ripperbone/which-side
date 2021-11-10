@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace WhichSide
 {
-    class StreetSideDeterminer
+    public class WhichSide
     {
     
-        bool IsEven(int num)
+        static bool IsEven(int num)
         {
             return (num % 2 == 0);
         }
 
-        public string DetermineWhichSide(DateTime date, bool verbose = true, bool houseEven = false)
+        public static string CheckWhichSide(DateTime date, bool houseEven, bool verbose = true)
         {
             // verbose: write step by step info to the console
             // houseEven: whether or not the house number is even
@@ -54,15 +54,5 @@ namespace WhichSide
             }
 
         }
-
-        public string DetermineWhichSide(bool verbose = true, bool houseEven = false)
-        {
-            // Determine which side for current date and time
-            // verbose: write step by step info to the console
-            // houseEven: whether or not the house number is even
-
-            return DetermineWhichSide(DateTime.Now, verbose, houseEven);
-        }
-
     }
 }
